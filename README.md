@@ -53,13 +53,13 @@
                 next_point = self.vertices[(i + 1) % len(self.vertices)]
     
     
-                v1 = Point(prev_point.x - current_point.x, prev_point.y - current_point.y)
-                v2 = Point(next_point.x - current_point.x, next_point.y - current_point.y)
+                vector1 = Point(prev_point.x - current_point.x, prev_point.y - current_point.y)
+                vector2 = Point(next_point.x - current_point.x, next_point.y - current_point.y)
     
     
-                dot_product = v1.x * v2.x + v1.y * v2.y
-                magnitude_v1 = (v1.x**2 + v1.y**2)**0.5
-                magnitude_v2 = (v2.x**2 + v2.y**2)**0.5
+                dot_product = vector1.x * vector2.x + vector1.y * vector2.y
+                magnitude_vector1 = (vector1.x**2 + vector1.y**2)**0.5
+                magnitude_vector2 = (vector2.x**2 + vector2.y**2)**0.5
                 angle_rad = acos(dot_product / (magnitude_v1 * magnitude_v2))
                 angle_deg = degrees(angle_rad)
     
